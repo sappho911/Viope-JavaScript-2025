@@ -21,13 +21,18 @@ function someFunction(arr, f1, f2, f3) {
 // console.log(array2.every(n => !isNaN(n)));
 
 function checkFunc(arr) {
-  const isNumbers = arr.every(n => !isNaN(n));
+  let isNumbers = arr.every(n => !isNaN(n));
 
-  if (isNumbers) {
-    console.log('Array has only numbers. Calculating sum:');
-  } else {
-    console.log('Array has strings. Combining words:');
-  }
+  // another way using Ternary operation
+  isNumbers
+    ? console.log('Array has only numbers. Calculating sum:')
+    : console.log('Array has strings. Combining words:');
+
+  // if (isNumbers) {
+  //   console.log('Array has only numbers. Calculating sum:');
+  // } else {
+  //   console.log('Array has strings. Combining words:');
+  // }
   return isNumbers;
 }
 
