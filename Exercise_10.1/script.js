@@ -1,34 +1,44 @@
 'use strict';
 
-var store = {};
+// // IIFE function
+// (function () {
+//   // statements…
+// })();
 
-shop.cart = (function () {
-  var products = [];
-  function addProduct(productName) {
-    if (!products[productName]) {
-      // If the product is not added into the shopping cart, add it there.
-      products[Productname] = 0;
-    }
-    // Raise the number of products by one
-    products[productName]++;
+const weekday = (function () {
+  // prettier-ignore
+  const names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  function count() {
+    if (!names) return;
+    return names.length;
   }
 
-  function totalProducts() {
-    var amount = 0;
-    for (var productName in products) {
-      amount += products[Productname];
-    }
-    return amount;
+  function getDay(day) {
+    return names[day];
+    // more modern way to use at() method;
+    // return names.at(day);
+  }
+
+  function getIndex(index) {
+    return names.indexOf(index);
   }
 
   // interface
   return {
-    add: addProduct,
-    productAmount: productTotal,
+    count: count,
+    name: getDay,
+    number: getIndex,
   };
 })();
 
-// IIFE function
-(function () {
-  // statements…
-})();
+let num = 0;
+
+console.log('There are ' + weekday.count() + ' days in a week.');
+console.log(
+  'In programming, the index of ' +
+    weekday.name(num) +
+    ' tends to be ' +
+    weekday.number(weekday.name(num)) +
+    '.'
+);
