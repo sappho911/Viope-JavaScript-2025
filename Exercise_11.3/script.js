@@ -14,7 +14,8 @@ class Shape {
 
 class Circle extends Shape {
   constructor(x, y, radius) {
-    super(x, y), (this.radius = radius);
+    super(x, y);
+    this.radius = radius;
   }
 
   getArea() {
