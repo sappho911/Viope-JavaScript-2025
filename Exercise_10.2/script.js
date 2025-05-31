@@ -19,6 +19,7 @@ shop.customerRegistry = (function () {
     const userID = users.length;
     id < 0 || id >= userID ? console.log('Too high an ID value!') : '';
   }
+
   function customerList() {
     console.log('Listing all customers:');
     users.forEach(function (user, i) {
